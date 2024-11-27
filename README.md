@@ -1,0 +1,1 @@
+# sktipt-bash-test
