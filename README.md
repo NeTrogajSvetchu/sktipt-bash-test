@@ -1,7 +1,7 @@
 ###
 
 monitor_test.sh
-
+```
 #!/bin/bash
 
 PROCESS_NAME="test"
@@ -30,25 +30,25 @@ elif ! pgrep -x "$PROCESS_NAME" | grep -f /tmp/test_pid > /dev/null; then
    
     pgrep -x "$PROCESS_NAME" > /tmp/test_pid
 fi
-
+```
 
 ###
 
 monitor_test.service 
 
-
+```
 [Unit]
 Description=Мониторинг процесса test
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/monitor_test.sh
-
+```
 ###
 
 monitor_test.timer
 
-
+```
 [Unit]
 Description=Таймер для мониторинга процесса test
 
@@ -58,4 +58,4 @@ Persistent=true
 
 [Install]
 WantedBy=timers.target
-
+```
